@@ -1,15 +1,14 @@
-/***********************************************************************
-*	Fahim Sunka 	4-XX-2019
-*	Spring 2019		COSC 1437-58000
-*	Dr. McMillan    DevC++ 5.11
-*	I will attempt to make a dynamic array.
+/*******************************************************************************
+*	Fahim Sunka 	4-12-2019
+*	Spring 2019		COSC 1437-58000		   DevC++ 5.11
+*	Dynamic Array Attempt
 * Summary:
 *           Appeared to be successful
 *           Dynamic array starts at size 1, doubles whenever limit is reached
 *           Double size increase was arbitrary/is basic for understanding
 *           Minor formatting - Grades 90+ Green, <60 Red, Else White
 *           5 grades per row print out along with average and total # of grades
-************************************************************************/
+*******************************************************************************/
 
 #include <iostream>
 #include <iomanip>
@@ -51,11 +50,11 @@ int main()
 		
 		cout << "\nPlease enter grade #" << index+1 << " (or -1 when done): ";
 		changeColor(C);
-		validate(grade, 1, -1, 150);
+		validate(grade, 1, -1.0, 150.0); // uses my input validation - forces a double between -1 and 150.0
 		changeColor();
 		if(grade == -1.0)
 		{
-			break;
+			break;  // exit condition met
 		}
 		
 		gradesArray[index] = grade; // Add the grade to the array
